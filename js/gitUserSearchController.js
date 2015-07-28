@@ -1,0 +1,4 @@
+githubUserSearch.controller('GitUserSearchController', [function(){
+
+
+}])
