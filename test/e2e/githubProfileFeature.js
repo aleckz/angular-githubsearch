@@ -18,16 +18,16 @@ describe('Github Profile finder', function(){
   // });
 
   it('finds profiles', function(){
-    searchBox.sendKeys('tansaku');
+    searchBox.sendKeys('spike01');
     searchButton.click();
     var profiles = element.all(by.repeater('user in searchController.searchResult.items'));
-    expect(profiles.get(0).getText()).toEqual('tansaku')
+    expect(profiles.get(0).getText()).toEqual('spike01')
   });
 
   it('finds the last user', function(){
     searchBox.sendKeys('tansaku');
     searchButton.click();
     var profiles = element.all(by.repeater('user in searchController.searchResult.items'));
-    expect(profiles.last().getText()).toEqual('stephenlloyd');
+    expect(profiles.last().getText()).toEqual('tansaku');
   })
 });
