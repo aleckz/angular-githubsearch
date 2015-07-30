@@ -4,9 +4,7 @@ githubUserSearch.controller('GitUserSearchController', ['$resource', function($r
 
   self.doSearch = function(){
     self.searchResult = searchResource.get(
-      { q: self.searchTerm  }
+      { q: self.searchTerm,
+        access_token: gitSecret }
     )};
 }]);
-
-
-// 45cfd896bfb7c1dd9fe08002df24e4800cb06c89
