@@ -20,8 +20,8 @@ describe('GitUserSearchController', function(){
         .when("GET", "https://api.github.com/search/users?q=hello")
         .respond(
           { items: items }
-        )
-    }))
+        );
+    }));
 
     var items = [
       {
@@ -37,7 +37,9 @@ describe('GitUserSearchController', function(){
     ];
 
     it('displays search results', function(){
+      controller.searchTerm = 'hello'
       controller.doSearch();
+      httpBackend.flush();
       expect(controller.searchResult.items).toEqual(items);
     });
   });
