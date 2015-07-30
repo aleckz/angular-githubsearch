@@ -2,7 +2,7 @@
 <html lang="en" ng-app="GitUserSearch">
   <head>
     <meta charset="utf-8">
-    <title>Github user search</title>
+    <title>Github User Search</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -12,7 +12,7 @@
   <body ng-controller="GitUserSearchController as searchController">
     <div>
       <form class="form-horizontal">
-        <input type="text">
+        <input type="text" ng-model="searchController.searchTerm">
         <button class="btn" ng-click="searchController.doSearch()">Search</button>
       </form>
       <ul class="list-group" ng-repeat="user in searchController.searchResult.items">
